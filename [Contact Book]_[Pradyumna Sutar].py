@@ -1,5 +1,5 @@
 #Contact Book
-# Initialize an empty contact book (dictionary) and a Sequence order for contact IDs
+# Initialize an empty contact book dictionary and a Sequence order for contact IDs
 contacts_list = {} # using dictionary : Gaddis Python 6e Chapter 09
 num_contact = 1
 
