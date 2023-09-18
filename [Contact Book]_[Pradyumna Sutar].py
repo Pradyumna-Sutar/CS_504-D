@@ -32,20 +32,23 @@ while True:
     if choice == "1":
         print("Enter the Details\n")
         name = input("Enter the contact name: ")
-        email = input("Enter the contact mail ID: ")
-        phone = input("Enter the Mobile Number: ")
+        if name in contacts_list:
+            print(f"{name} is already in your contacts.")
+        else:
+            email = input("Enter the contact mail ID: ")
+            phone = input("Enter the Mobile Number: ")
 
-        # Generate a unique ID for contact
-        contact_numid = num_contact
-        num_contact += 1
+            # Generate a unique ID for contact
+            contact_numid = num_contact
+            num_contact += 1
 
-        # Add contact to the contact list
-        contacts_list[contact_numid] = {"Name": name, "mail-ID": email, "Mobi": phone} # mixing data types in dictionary : Gaddis Python 6e Chapter 09
+            # Add contact to the contact list
+            contacts_list[contact_numid] = {"Name": name, "mail-ID": email, "Mobi": phone} # mixing data types in dictionary : Gaddis Python 6e Chapter 09
 
-        print(f"Contact '{name}' has been added to the e-contact.")
+            print(f"Contact '{name}' has been added to the e-contact.")
 
-        # Store the updated contacts to the text file
-        store_the_contacts_textfile() # Defining and Calling a Function from Gaddis Python 6e Chapter 05
+            # Store the updated contacts to the text file
+            store_the_contacts_textfile() # Defining and Calling a Function from Gaddis Python 6e Chapter 05
 
     # view the entered contact information
     elif choice == "2":
